@@ -11,12 +11,38 @@ The page was written in **Quarto** and published straight to GitHub.
 - It renders to a real webpage.
 - the source is plain text so Git tracks every change cleanly.
 
-![](images/dopoMonkey.jpg){fig-align="center" width="648"}
-
-
 - crtl+shift+p to add the python envoirnment
 - crtl+shift+i to make a python chunck
+
 ```{python}
 print('Hello from a rendered code chunck')
 ```
 
+## Load and Inspect
+
+```{python}
+
+import pandas as pd
+
+import plotly.express as px
+
+sales = pd.read_csv('data/campus_cafe_sales.csv')
+
+sales.head()
+
+```
+
+## Code Chunk behaviors
+
+```{python}
+#| echo: false
+
+print('this line was produced by python to be rendered but code is hiddeen')
+```
+
+```{python}
+#| include: false
+
+#runs silently. nothing appears here, but sales exists for every chunk below it
+sales = pd.read_csv('data/campus_cafe_sales.csv')
+```
