@@ -1,0 +1,22 @@
+---
+title: "My First Quarto Site"
+author: "David Omitogun"
+format: html
+---
+
+## Welcome
+
+The page was written in **Quarto** and published straight to GitHub.
+
+- It renders to a real webpage.
+- the source is plain text so Git tracks every change cleanly.
+
+![](images/dopoMonkey.jpg){fig-align="center" width="648"}
+
+
+- crtl+shift+p to add the python envoirnment
+- crtl+shift+i to make a python chunck
+```{python}
+print('Hello from a rendered code chunck')
+```
+
